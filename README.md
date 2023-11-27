@@ -1,2 +1,2 @@
 # This Is An Overview Of My dwm Setup
-Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here][https://nerdfonts.com]
+Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here https://nerdfonts.com]
