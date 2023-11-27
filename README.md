@@ -22,10 +22,26 @@ cd dwm-6.4 && sudo make install
 sudo pacman -S xorg xorg-apps
 ```
 
-* you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it then copy mine to ~/
+* After Installing them , Then you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it then copy mine to ~/
 
 ```
 cp xinitrc ~/
 ```
 
-After finishing the xinitrc, you need to close any 'XWindowManager' this Means to stop sddm/gdm/lightdm (Whatever Your using) You Do that by doing 'sudo systemctl stop sddm/gdm/lightdm, then do 'startx'.
+* After finishing the xinitrc, you need to close any 'XWindowManager'
+* this Means to stop sddm/gdm/lightdm (Whatever Your using)
+
+```
+sudo systemctl stop sddm / gdm / lightdm
+```
+* Or To Disable Them permanently
+```
+sudo systemctl disable sddm / gdm / lightdm
+```
+* Finally when your in the tty , execute
+
+```
+startx
+```
+
+* It Should Drop you in dwm , Done
