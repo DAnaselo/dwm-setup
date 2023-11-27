@@ -16,7 +16,13 @@ sudo make install
 cd dwm-6.4 && sudo make install
 ```
 
-* After You've Built The Suckless apps you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it (Then you probably don't have the Dependinces for it so 'sudo pacman -S xorg xorg-apps' *That command runs only runs in archlinux) then copy mine to ~/ ,
+* After You've Built The Suckless apps , We Need To Install Some Dependencies
+
+```
+sudo pacman -S xorg xorg-apps
+```
+
+* you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it then copy mine to ~/
 
 ```
 cp xinitrc ~/
