@@ -2,7 +2,6 @@ Overview
 * [Notes](#Note)
 * [Installation](#Installation)
 ## Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here](https://nerdfonts.com)
-## Note , $HOME = ~/
 ## Installation
 * To Install Them On Your, System You Need To Go In These Files And Do a
 
