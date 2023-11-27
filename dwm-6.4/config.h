@@ -85,7 +85,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar")},
-	{ MODKEY,                       XK_g,      spawn,          SHCMD("com.google.Chrome")},
+	{ MODKEY,                       XK_g,      spawn,          SHCMD("flatpak run com.google.Chrome")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
