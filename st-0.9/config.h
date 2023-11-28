@@ -453,6 +453,9 @@ static Key key[] = {
 	{ XK_F35,           XK_NO_MOD,      "\033[23;5~",    0,    0},
 };
 
+
+float alpha = 0.5;
+
 /*
  * Selection types' masks.
  * Use the same masks as usual.

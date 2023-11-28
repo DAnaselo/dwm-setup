@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
@@ -25,6 +26,9 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -89,6 +93,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ 0,     XF86XK_AudioMute, spawn,                          {.v = mutecmd } },
+        { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
+        { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar")},
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("flatpak run com.google.Chrome")},
 	TAGKEYS(                        XK_1,                      0)

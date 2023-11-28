@@ -51,4 +51,5 @@ fi
 exec xclip &
 exec feh --bg-scale /home/anas/Documents/bg1.jpg &
 exec slstatus &
+exec picom & 
 exec dwm
