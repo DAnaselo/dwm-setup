@@ -51,4 +51,4 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
 ```
-* It Should Drop you in dwm , Done.
+* It Should Drop you in dwm , Enjoy.
