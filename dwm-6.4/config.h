@@ -98,7 +98,7 @@ static const Key keys[] = {
         { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
         { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar")},
-	{ MODKEY,                       XK_g,      spawn,          SHCMD("flatpak run com.google.Chrome")},
+	{ MODKEY,                       XK_g,      spawn,          SHCMD("thorium-browser-sse3")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
