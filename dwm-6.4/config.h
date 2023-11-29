@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Nautilus",   NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -104,7 +105,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	{ MODKEY|ShiftMask,             XK_m,      quit,           {0} },
+	{ MODKEY,                       XK_m,      quit,           {0} },
 };
 
 /* button definitions */
