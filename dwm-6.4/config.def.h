@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Nautilus",   NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -98,13 +99,13 @@ static const Key keys[] = {
         { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
         { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar")},
-	{ MODKEY,                       XK_g,      spawn,          SHCMD("flatpak run com.google.Chrome")},
+	{ MODKEY,                       XK_g,      spawn,          SHCMD("thorium-browser-sse3")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	{ MODKEY|ShiftMask,             XK_m,      quit,           {0} },
+	{ MODKEY,                       XK_m,      quit,           {0} },
 };
 
 /* button definitions */
