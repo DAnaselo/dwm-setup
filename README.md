@@ -13,7 +13,7 @@ cd dwm-6.4 && sudo make install
 ```
 * After You've Built The Suckless apps , We Need To Install Some Dependencies.
 ```
-sudo pacman -S xorg xorg-apps xorg-xinit feh xclip
+sudo pacman -S xorg xorg-apps xorg-xinit feh xclip noto-fonts-extra
 ```
 ```
 yay -S picom-git
