@@ -11,8 +11,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Noto Nerd Font:size=10" };
-static const char dmenufont[]       = "Noto Nerd Font:size=10";
+static const char *fonts[]          = { "NotoSansMNerdFont:size=10" };
+static const char dmenufont[]       = "NotoSansMNerdFont:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -74,6 +74,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_q,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_l,      spawn,          SHCMD("slock")},
+	{ MODKEY,                       XK_A,      spawn,          SHCMD("rofi -show drun")},
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
