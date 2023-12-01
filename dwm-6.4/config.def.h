@@ -75,6 +75,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_q,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_l,      spawn,          SHCMD("slock")},
 	{ MODKEY,                       XK_a,      spawn,          SHCMD("rofi -show drun")},
+	{ MODKEY,                       XK_p,      spawn,          SHCMD("flameshot gui")}, 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
