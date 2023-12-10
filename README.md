@@ -18,6 +18,10 @@ sudo pacman -S xorg xorg-apps xorg-xinit feh xclip noto-fonts-extra rofi polkit-
 ```
 yay -S picom-git
 ```
+* For Fedora Uses Install These Insted.
+```
+sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
+```
 * After Installing them , Then you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it then copy mine to ~/.
 ```
 cp xinitrc ~/
