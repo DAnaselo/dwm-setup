@@ -1,11 +1,11 @@
 Overview
 * [Notes](#Note)
 * [Installation](#Installation)
+## Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here](https://nerdfonts.com)
 ## If You use Fedora Install These First Before You Compile , They Will Fail If Not Installed.
 ```
 sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
 ```
-## Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here](https://nerdfonts.com)
 ## Installation
 * To Install Them On Your, System You Need To Go In These Files And Do a.
 ```
