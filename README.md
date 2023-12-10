@@ -13,14 +13,14 @@ cd dwm-6.4 && sudo make install
 ```
 * After You've Built The Suckless apps , We Need To Install Some Dependencies.
 ```
-sudo pacman -S xorg xorg-apps xorg-xinit feh xclip noto-fonts-extra rofi polkit-gnome
+sudo pacman -S xorg xorg-apps xorg-xinit nitrogen xclip noto-fonts-extra rofi polkit-gnome
 ```
 ```
 yay -S picom-git
 ```
 * For Fedora Uses Install These Insted.
 ```
-sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
+sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel rofi xclip picom
 ```
 * After Installing them , Then you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it then copy mine to ~/.
 ```
