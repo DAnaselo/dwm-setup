@@ -1,6 +1,10 @@
 Overview
 * [Notes](#Note)
 * [Installation](#Installation)
+## If You use Fedora Install These First Before You Compile , They Will Fail If Not Installed.
+```
+sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
+```
 ## Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here](https://nerdfonts.com)
 ## Installation
 * To Install Them On Your, System You Need To Go In These Files And Do a.
@@ -18,9 +22,9 @@ sudo pacman -S xorg xorg-apps xorg-xinit nitrogen xclip noto-fonts-extra rofi po
 ```
 yay -S picom-git
 ```
-* For Fedora Uses Install These Insted.
+* For Fedora Uses These.
 ```
-sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel rofi xclip picom
+sudo dnf install rofi xclip picom
 ```
 * After Installing them , Then you need to add 'exec dwm' to your ~/.xinitrc , or if you don't have it then copy mine to ~/.
 ```
