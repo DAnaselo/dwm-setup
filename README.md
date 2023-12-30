@@ -1,10 +1,13 @@
 Overview
 * [Notes](#Note)
 * [Installation](#Installation)
-## Note , I Use Noto Nerd Fonts That Can Be Downloaded From [Here](https://nerdfonts.com)
-## If You use Fedora Install These First Before You Compile , They Will Fail If Not Installed.
+## If You use Fedora Install These First Before You Compile , It Will Fail If Not Installed.
 ```
 sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
+```
+## If You ues Arch Install This First Before you Comile , It Will Fail If not Installed
+```
+sudo pacman -S base-devel
 ```
 ## Installation
 * To Install Them On Your, System You Need To Go In These Files And Do a.
@@ -17,7 +20,7 @@ cd dwm-6.4 && sudo make install
 ```
 * After You've Built The Suckless apps , We Need To Install Some Dependencies.
 ```
-sudo pacman -S xorg xorg-apps xorg-xinit nitrogen xclip noto-fonts-extra rofi polkit-gnome
+sudo pacman -S xorg xorg-apps xorg-xinit nitrogen xclip noto-fonts-extra rofi polkit-kde-agent
 ```
 ```
 yay -S picom-git
