@@ -38,8 +38,8 @@ fi
 
 exec xclip &
 exec flameshot &
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec feh --bg-scale /home/anas/Documents/bg5.jpg &
+exec /usr/lib/polkit-kde-authentication-agent-1 &
+exec nitrogen --restore &
 exec slstatus &
 exec picom & 
 exec dwm
