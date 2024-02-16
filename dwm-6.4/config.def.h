@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"copyq", NULL,
+	"xclip", NULL,
 	"/usr/lib/polkit-kde-authentication-agent-1", NULL,
 	"nitrogen", "--restore", NULL,
 	"slstatus", NULL,
@@ -108,8 +108,8 @@ static const Key keys[] = {
 	{ 0,     XF86XK_AudioMute, spawn,                          {.v = mutecmd } },
         { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
         { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar")},
-	{ MODKEY,                       XK_g,      spawn,          SHCMD("thorium-browser-sse3")},
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("dolphin")},
+	{ MODKEY,                       XK_g,      spawn,          SHCMD("flatpak run com.google.Chrome")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
