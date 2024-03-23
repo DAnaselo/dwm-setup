@@ -25,8 +25,10 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"xclip", NULL,
-	"/usr/lib/polkit-kde-authentication-agent-1", NULL,
+	"copyq", NULL,
+	"/usr/lib/polkit-gnome-authentication-agent-1", NULL,
+  "solaar -w hide", NULL,
+  "kdeconnect-indicator", NULL,
 	"nitrogen", "--restore", NULL,
 	"slstatus", NULL,
 	NULL /* terminate */
@@ -106,10 +108,12 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,     XF86XK_AudioMute, spawn,                          {.v = mutecmd } },
-        { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
-        { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("dolphin")},
-	{ MODKEY,                       XK_g,      spawn,          SHCMD("flatpak run com.google.Chrome")},
+  { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
+  { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st lf")},
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("flatpak run com.google.Chrome")},
+  { MODKEY,                       XK_d,      spawn,          SHCMD("discord")},
+  { MODKEY,                       XK_z,      spawn,          SHCMD("blueman-manager")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
