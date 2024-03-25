@@ -21,12 +21,8 @@ cd dwm-6.4 && sudo make install
 * After You've Built The Suckless apps , We Need To Install Some Dependencies.
 ```
 sudo pacman -S xorg xorg-apps xorg-xinit nitrogen xclip noto-fonts-extra rofi polkit-kde-agent
-```
-* if you don't have paru already in your env git this
-```
 git clone https://aur.archlinux.org/paru-bin.git
 makepkg -si
-```
 paru -S picom-git
 ```
 * For Fedora Uses These.
