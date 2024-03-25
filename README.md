@@ -1,11 +1,11 @@
 Overview
 * [Notes](#Note)
 * [Installation](#Installation)
-## If You use Fedora Install These First Before You Compile , It Will Fail If Not Installed.
+## on Fedora Linux Install Said Packages , These Are Deps for compiling this repo , if their not met, the compile Will fail
 ```
 sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
 ```
-## If You ues Arch Install This First Before you Comile , It Will Fail If not Installed
+## Samething On Arch Linux , Install this package To Be Able To Compile Things
 ```
 sudo pacman -S base-devel
 ```
