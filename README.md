@@ -22,8 +22,12 @@ cd dwm-6.4 && sudo make install
 ```
 sudo pacman -S xorg xorg-apps xorg-xinit nitrogen xclip noto-fonts-extra rofi polkit-kde-agent
 ```
+* if you don't have paru already in your env git this
 ```
-yay -S picom-git
+git clone https://aur.archlinux.org/paru-bin.git
+makepkg -si
+```
+paru -S picom-git
 ```
 * For Fedora Uses These.
 ```
