@@ -63,5 +63,3 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 fi
 ```
 * It Should Drop you in dwm , Enjoy.
-
-HEY BAKR 👋👋👋
