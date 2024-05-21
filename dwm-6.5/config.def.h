@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"copyq", NULL,
-  "solaar -w hide", NULL,
+  "solaar", "-w", "hide", NULL,
   "kdeconnect-indicator", NULL,
 	"nitrogen", "--restore", NULL,
 	"slstatus", NULL,
@@ -108,6 +108,7 @@ static const Key keys[] = {
   { 0,     XF86XK_AudioMute, spawn,                          {.v = mutecmd } },
   { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
   { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
+  { MODKEY,                       XK_w,      spawn,          SHCMD("brave")},
   { MODKEY,                       XK_e,      spawn,          SHCMD("st lf")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
