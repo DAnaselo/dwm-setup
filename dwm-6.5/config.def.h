@@ -2,7 +2,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int refresh_rate = 60;    /* matches dwm's mouse event processing to your monitor's refresh rate for smoother window interactions */
+static const unsigned int refresh_rate = 60;
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -108,7 +108,7 @@ static const Key keys[] = {
   { 0,     XF86XK_AudioMute, spawn,                          {.v = mutecmd } },
   { 0,     XF86XK_AudioLowerVolume,          spawn,          {.v = voldowncmd } },
   { 0,     XF86XK_AudioRaiseVolume,          spawn,          {.v = volupcmd } },
-  { MODKEY,                       XK_w,      spawn,          SHCMD("brave")},
+  { MODKEY,                       XK_w,      spawn,          SHCMD("xdg-open https://")},
   { MODKEY,                       XK_e,      spawn,          SHCMD("st lf")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
