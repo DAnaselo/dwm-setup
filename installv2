@@ -18,7 +18,7 @@ FOLDERS=($(find "${REPO_PATH}" -type d))
 for folder in "${FOLDERS[@]}"; do
     cd "${folder}"
     rm -rf config.h
-    make -k clean install
+    sudo make -k clean install
 done
 clear
 
