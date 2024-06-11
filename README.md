@@ -1,18 +1,18 @@
 Overview
 * [Notes](#Note)
 * [Installation](#Installation)
+* [ATTENTION](#ATTENTION)
 ## on Fedora Linux Install Said Packages , These Are Deps for compiling this repo , if their not met, the compile Will fail
 ```
 sudo dnf install LibX11-devel LibXft-devel LibXinerama-devel LibXrandr-devel
 ```
-## Samething On Arch Linux , Install this package To Be Able To Compile Things
-```
-sudo pacman -S base-devel
-```
 ## Installation
 * To Install Them On Your, System You Need To Go In These Files And Do a.
-```
-sudo make install
+
+## ATTENTION
+* For Arch linux now we have a script to install dwm :)
+
+sudo make clean install
 ```
 * E.g , Build dwm.
 ```
