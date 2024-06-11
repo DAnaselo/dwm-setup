@@ -27,8 +27,6 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"copyq", NULL,
-  "solaar", "-w", "hide", NULL,
-  "kdeconnect-indicator", NULL,
 	"nitrogen", "--restore", NULL,
 	"slstatus", NULL,
 	NULL /* terminate */
