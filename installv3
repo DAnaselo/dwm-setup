@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Check if base-devel is already installed
+if pacman -Qi base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput | grep -q "installed"; then
+    echo "Needed Packages are already installed."
+else
+    # Install base-devel using pacman
+    sudo pacman -S --needed base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput
+fi
+
+# Set the repository path to the current working directory
+REPO_PATH=$(pwd)
+
+# Get a list of folders in the repository
+FOLDERS=($(find "${REPO_PATH}" -type d))
+
+# Iterate over each folder and run "make clean install"
+for folder in "${FOLDERS[@]}"; do
+    cd "${folder}"
+    rm -rf config.h
+    sudo make -k clean install
+done
+clear
+
+echo "dwm and its packages have been installed correctly."
+sleep 1
+echo "Yay :)"
+sleep 1
+clear
+
+# Copy .Xresources and .xinitrc files from REPO_PATH to home directory
+cp "$REPO_PATH/.Xresources" "$HOME"
+cp "$REPO_PATH/.xinitrc" "$HOME"
+
+echo ".Xresources and .xinitrc files copied to your home directory."
+sleep 1
+
+# Check if any display manager is enabled
+if [[ $(systemctl is-active --quiet lightdm) || $(systemctl is-active --quiet greetd) ]]; then
+  # Disable the enabled display manager
+  sudo systemctl disable $(systemctl is-active --quiet lightdm greetd)
+  echo "Previous display manager has been disabled."
+fi
+
+read -p "Do you want to install lightdm? (y/n): " install_lightdm
+
+if [[ "$install_lightdm" == "y" ]]; then
+    sudo pacman -S lightdm || { echo "Error installing lighdm"; exit 1; } 
+    sudo systemctl enable lightdm.service || { echo "Error enabling lightdm"; exit 1; }
+    clear
+    echo "Lightdm Has Been Installed/Enabled succesfully."
+    sleep 1
+    sudo mkdir -p /usr/share/xsessions || { echo "Error Making /usr/share/xsessions"; exit 1; }
+    sudo cp ${REPO_PATH}/dwm.desktop /usr/share/xsessions/ || { echo "Erro Copying dwm.desktop"; exit 1; }
+    echo "dwm.desktop >> /usr/share/xsessions/dwm.desktop."
+    sleep 1
+  else
+    read -p "Do you want to install greetd? (y/n): " install_greetd
+
+if [[ "$install_greetd" == "y" ]]; then
+    sudo pacman -S greetd
+    sudo systemctl enable greetd.service
+    clear
+    echo "greetd Has Been installed And Enabled."
+    sleep 1
+else
+    echo "No display manager has been installed."
+    sleep 1
+  fi
+fi
+sleep 1
+clear
+echo "Thanks for using my script, have fun :),  https://github.com/DAnaselo"
