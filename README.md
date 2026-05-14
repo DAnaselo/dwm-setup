@@ -1,5 +1,2 @@
-* Clone This Repo Anywhere you want then run the included script. Arch linux only
-```
-./installv3
-```
+* Clone This Repo Anywhere you like, instructions will be provided shortly
 Have Fun ;)
