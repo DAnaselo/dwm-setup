@@ -70,5 +70,4 @@ static const struct arg args[] = {
   { ram_free,    "| RAM:%s ",      	   NULL },
   { disk_free,   "| DISK:%s ", 	        "/" },
   { datetime,    "| %s", "%I:%M%p - %m/%d " },
-,
 };
