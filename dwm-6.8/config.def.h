@@ -1,5 +1,3 @@
-/* See LICENSE file for copyright and license details. */
-
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -20,29 +18,27 @@ static const char col_gray4[]       = "#fbf1c7";
 static const char col_cyan[]        = "#458588";
 static const char col_lightcyan[]   = "#83a598";
 static const char col_orange[]	    = "#d65d0e";
-
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_orange, col_orange },
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-  [SchemeTagsSel]  = { col_gray4, col_orange,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-  [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { col_gray4, col_gray2,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-  [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty} {text,background,not used but cannot be empty}
+[SchemeSel]  = { col_gray4, col_orange, col_orange },
+[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+[SchemeTagsSel]  = { col_gray4, col_orange,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+[SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+[SchemeInfoSel]  = { col_gray4, col_gray2,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+[SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty} {text,background,not used but cannot be empty}
 };
 
 static const char *const autostart[] = {
   "xset", "r", "rate", "350", "50", NULL,
   "xinput", "set-prop", "7", "libinput Accel Profile Enabled", "0", "1", "0", NULL,
-	"nitrogen", "--restore", NULL,
+  "nitrogen", "--restore", NULL,
   "slstatus", NULL,
-	NULL /* terminate */
+  NULL /* terminate */
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", };
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -87,10 +83,10 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ Mod1Mask,                       XK_space,  spawn,          {.v = dmenucmd } },
-	{ Mod1Mask,                       XK_Return, spawn,          {.v = termcmd } },
-  { MODKEY,                       XK_w,      spawn,          SHCMD("xdg-open https://")},
-  { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")},
+	{ Mod1Mask,                     XK_space,  spawn,          {.v = dmenucmd } },
+	{ Mod1Mask,                     XK_Return, spawn,          {.v = termcmd } },
+    { MODKEY,                       XK_w,      spawn,          SHCMD("xdg-open https://")},
+    { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")},
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -119,11 +115,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
