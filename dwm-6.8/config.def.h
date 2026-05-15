@@ -32,6 +32,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
   "xset", "r", "rate", "350", "50", NULL,
   "xinput", "set-prop", "7", "libinput Accel Profile Enabled", "0", "1", "0", NULL,
+  "/usr/lib/xdg-desktop-portal-gtk", NULL,
   "nitrogen", "--restore", NULL,
   "slstatus", NULL,
   NULL /* terminate */
