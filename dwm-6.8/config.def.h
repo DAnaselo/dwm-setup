@@ -84,6 +84,7 @@ static const Key keys[] = {
 	{ Mod1Mask,                     XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_w,      spawn,          SHCMD("xdg-open https://")},
     { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")},
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("pcmanfm")},
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
