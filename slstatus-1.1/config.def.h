@@ -79,5 +79,5 @@ static const struct arg args[] = {
   { disk_free,   "| DISK:%s ", 	   	     "/" },
   /* its slow i know... not gonna increase the interval value. you do that */
   { run_command, "| AUDIO:%s ",          vol },
-  { datetime,    "| %s ",  "%I:%M%p - %m/%d" },
+  { datetime,    "| %s |",  "%I:%M%p - %m/%d" },
 };
